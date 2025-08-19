@@ -1,0 +1,6 @@
+@SistemaRequerimientos_HostAddress = http://localhost:5163
+
+GET {{SistemaRequerimientos_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
