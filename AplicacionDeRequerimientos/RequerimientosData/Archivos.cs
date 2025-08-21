@@ -30,32 +30,37 @@ namespace RequerimientosData
             {
                 if (requerimiento.Eliminado)
                 {
-                    // Marcar como eliminado
+                    
                     existente.Eliminado = true;
                 }
                 else
                 {
-                    // Actualizar datos
+                   
                     existente.Titulo = requerimiento.Titulo;
                     existente.Descripcion = requerimiento.Descripcion;
                     existente.Prioridad = requerimiento.Prioridad;
                     existente.FechaDeVencimiento = requerimiento.FechaDeVencimiento;
                     existente.EstadoActual = requerimiento.EstadoActual;
-                    // No actualices FechaDeCreacion ni Eliminado
+                   
                 }
             }
+            string directorioDestino = "../RequerimientosData/Datos";
+            string rutaCompleta = Path.Combine(directorioDestino, "archivos.json");
+            string rutaAbsolutaDestino= Path.GetFullPath(rutaCompleta);
 
-            string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "requerimientos.json");
-            string json = JsonConvert.SerializeObject(lista, Formatting.Indented);
-            File.WriteAllText(rutaArchivo, json);
+            Directory.CreateDirectory(Path.GetDirectoryName(rutaAbsolutaDestino));
+            string json=JsonConvert.SerializeObject(lista,Formatting.Indented);
+            File.WriteAllText(rutaAbsolutaDestino,json);
             return requerimiento;
         }
         public static List<Requerimiento> LeerDesdeJson()
         {
-            string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "requerimientos.json");
-            if (File.Exists(rutaArchivo))
+            string directorDestino = "../RequerimientosData/Datos";
+            string rutaCompleta = Path.Combine(directorDestino, "archivos.json");
+            string rutaAbsolutaDestino = Path.GetFullPath(rutaCompleta);
+            if (File.Exists(rutaAbsolutaDestino))
             {
-                string json = File.ReadAllText(rutaArchivo);
+                string json = File.ReadAllText(rutaAbsolutaDestino);
                 return JsonConvert.DeserializeObject<List<Requerimiento>>(json);
             }
             return new List<Requerimiento>();

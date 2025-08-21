@@ -1,0 +1,12 @@
+[
+  {
+    "Id": 1,
+    "Titulo": "string",
+    "Descripcion": "string",
+    "Prioridad": 0,
+    "FechaDeCreacion": "2025-08-21T19:17:53.7563243-03:00",
+    "FechaDeVencimiento": "2025-08-21",
+    "EstadoActual": 0,
+    "Eliminado": false
+  }
+]
