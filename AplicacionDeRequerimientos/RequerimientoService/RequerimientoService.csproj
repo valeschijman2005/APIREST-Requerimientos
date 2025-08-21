@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RequerimientoDTO\RequerimientoDTO.csproj" />
     <ProjectReference Include="..\RequerimientosData\RequerimientosData.csproj" />
-    <ProjectReference Include="..\SistemaEntities\SistemaEntities.csproj" />
+    <ProjectReference Include="..\RequerimientosDTO\RequerimientosDTO.csproj" />
+    <ProjectReference Include="..\RequerimientosEntities\RequerimientosEntities.csproj" />
   </ItemGroup>
 
 </Project>

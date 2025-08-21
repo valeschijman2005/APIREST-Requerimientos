@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RequerimientoDTO
+namespace RequerimientosDTO
 {
     public class Error
     {
-            public string ErrorDetail { get; set; }
-        
+        public string ErrorDetail { get; set; } 
     }
-
 }
-

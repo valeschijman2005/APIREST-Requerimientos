@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SistemaEntities\SistemaEntities.csproj" />
+    <ProjectReference Include="..\RequerimientosEntities\RequerimientosEntities.csproj" />
   </ItemGroup>
 
 </Project>

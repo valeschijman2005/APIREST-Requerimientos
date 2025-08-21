@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RequerimientoDTO
+namespace RequerimientosDTO
 {
-    public enum Prioridades
+    public enum Prioridad
     {
         Alta,
         Media,
         Baja
     }
-    public enum Estados
+    public enum Estado
     {
         Pendiente,
         Progreso,

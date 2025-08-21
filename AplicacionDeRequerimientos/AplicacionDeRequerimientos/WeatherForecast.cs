@@ -1,4 +1,4 @@
-namespace SistemaRequerimientos
+namespace AplicacionDeRequerimientos
 {
     public class WeatherForecast
     {

@@ -4,22 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using SistemaEntities; 
 
-namespace RequerimientoDTO
+
+namespace RequerimientosDTO
 {
     public class RequerimientoACrearDTO
     {
         [Required]
-        public string Titulo {  get; set; }
+        public string Titulo { get; set; }
         [Required]
         public string Descripcion { get; set; }
 
         [Required]
-        [EnumDataType(typeof(Prioridades))]
-        public Prioridades Prioridad { get; set; }
+        [EnumDataType(typeof(Prioridad))]
+        public Prioridad Prioridad { get; set; }
         [Required]
 
-        public DateOnly FechaVencimiento {  get; set; }
+        public DateOnly FechaVencimiento { get; set; }
     }
 }
